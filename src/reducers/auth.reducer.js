@@ -2,12 +2,14 @@ import { authConstants } from "../actions/constants"
 
 const initState={
     firstName:'',
-    lastname:'',
+    lastName:'',
+    email:'',
     authenticating:false,
     authenticated:false,
     error:null
 }
 export default (state=initState,action)=>{
+   console.log(action) 
     switch(action.type){
         case `${authConstants.USER_LOGIN}_REQUEST`:
             state={
