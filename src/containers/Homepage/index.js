@@ -1,21 +1,63 @@
-import React from 'react';
+import React ,{useEffect}from 'react';
 import './style.css';
+
 import Layout from '../../components/Layout'
+import { getRealTimeUsers } from '../../actions/user.actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { userConstants } from '../../actions/constants';
+
+const User=(props)=>{
+    const {user} =props;
+    return (
+        <div className="displayName">
+        <div className="displayPic">
+            <img src="https://i.pinimg.com/originals/be/ac/96/beac96b8e13d2198fd4bb1d5ef56cdcf.jpg" alt="" />
+        </div>
+        <div style={{display:'flex',flex:1, justifyContent:'space-between', margin: '0 10px'}}>
+            <span style={{fontWeight: 500}}>{user.firstName}{user.lastName}</span>
+            <span>{user.isOnline ? 'online' :'offline'}</span>
+        </div>
+    </div>)
+}
+
 const HomePage = (props) => {
+    const dispatch=useDispatch();
+    const auth=useSelector(state=>state.auth)
+    const user=useSelector(state=>state.user)
+    let unsubscribe;
+    useEffect(()=>{
+        unsubscribe= dispatch(getRealTimeUsers(auth.uid))
+        .then(unsubscribe=>{
+            return unsubscribe;
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+    },[])
+    //console.log(user)
+    //component will unmount
+    useEffect(()=>{
+        return ()=>{
+            //cleanup
+            unsubscribe.then(f=>f()).catch(error=>console.log(error))
+        }
+    },[]);
+
+    
+
   return (
       <Layout>
     <section className="container">
     <div className="listOfUsers">
+        {
+            user.users.length >0 ? user.users.map(user=>{
+                  return (
+                      <User key={user.uid} user={user}  />
+                    )
+            }):null
+        }
 
-        <div className="displayName">
-            <div className="displayPic">
-                <img src="https://i.pinimg.com/originals/be/ac/96/beac96b8e13d2198fd4bb1d5ef56cdcf.jpg" alt="" />
-            </div>
-            <div style={{display:'flex',flex:1, justifyContent:'space-between', margin: '0 10px'}}>
-                <span style={{fontWeight: 500}}>Rizwan Khan</span>
-                <span>online</span>
-            </div>
-        </div>
+       
                 
     </div>
     <div className="chatArea">

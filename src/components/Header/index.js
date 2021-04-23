@@ -22,11 +22,15 @@ const Header = (props) => {
             
         </div>
           <div style={{margin: '20px 0', color: '#fff', fontWeight: 'bold'}}>
-            {auth.autheticated ? `Hi ${auth.firstName} ${auth.lastName}`:''}</div>
+            {auth.authenticated ? `Hi ${auth.firstName} ${auth.lastName}`:''}</div>
         <ul className="menu">
+          {
+            auth.authenticated ?
             <li>
-                <Link to={'#'} onClick={()=>dispatch(logout())}>Logout</Link>
-            </li> 
+            <Link to={'#'} onClick={()=>dispatch(logout(auth.uid))}>Logout</Link>
+        </li> :null
+          }
+           
         </ul>
     </header>
    )
