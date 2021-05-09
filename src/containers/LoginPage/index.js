@@ -40,6 +40,7 @@ const LoginPage = (props) => {
             <div className="loginContainer">
            <Card>
                <form onSubmit={userLogin}>
+               <h2 className="title">Sign in</h2>
                   <input
                   name="email"
                   type="text"

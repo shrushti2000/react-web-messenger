@@ -27,7 +27,7 @@ const RegisterPage = (props) => {
             <div className="registerContainer">
            <Card>
                <form onSubmit={registerUser}>
-                   <h2>Signup</h2>
+                   <h2 className="title">Signup</h2>
                <input
                   name="firstName"
                   type="text"

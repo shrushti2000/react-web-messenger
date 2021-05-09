@@ -3,19 +3,20 @@
     position: relative;
     height: 60px;
     display: flex;
-    background: #1b5ff9;
+    background-color: #D1BAAC;
     justify-content: space-between;
     box-sizing: border-box;
 }
 
 .logo{
-    font-size: 20px;
-    color: #fff;
-    text-transform: capitalize;
-    font-weight: bold;
+color:#765140;
+    font-size: 40px;
+  
     margin: 18px;
     text-shadow: 0 0;
+    font-family: 'Newsreader', serif;
 }
+
 
 .menu{
     display: flex;
@@ -32,6 +33,41 @@
 .leftMenu{
     display: flex; 
     color: #fff; 
+    margin: 20px;
+}
+
+.leftMenu > li{
+    margin: 0 10px;
+}
+
+.leftMenu > li > a{
+    
+    color:#765140;
+    font-size: 30px;
+    font-family: 'Newsreader', serif;
+
+}
+
+.leftMenu > li > a.active{
+    font-weight: bold;
+}
+
+.menu{
+    display: flex;
+    margin: 20px;
+}
+
+.menu > li > a{
+    color: #fff;
+    color:#765140;
+    
+    font-family: 'Newsreader', serif;
+    
+}
+
+.leftMenu{
+    display: flex; 
+    
     margin: 20px;
 }
 
