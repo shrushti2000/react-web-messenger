@@ -11,10 +11,10 @@ const User=(props)=>{
     return (
         <div onClick={()=>onClick(user)} className="displayName">
         <div className="displayPic">
-            <img src="https://i.pinimg.com/originals/be/ac/96/beac96b8e13d2198fd4bb1d5ef56cdcf.jpg" alt="" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1H81w4SmKH5DZmIbxU7EB0aMSkNQDoPQA1mRQxf2Y0wMF1NSa7vghbwwKASi1q4NPmNw&usqp=CAU" alt="" />
         </div>
         <div style={{display:'flex',flex:1, justifyContent:'space-between', margin: '0 10px'}}>
-            <span style={{fontWeight: 500}}>{user.firstName}{user.lastName}</span>
+            <span className="username" style={{fontWeight: 500}}>{user.firstName}{user.lastName}</span>
             <span className={user.isOnline ? `onlineStatus` : `onlineStatus off` }></span>
         </div>
     </div>)

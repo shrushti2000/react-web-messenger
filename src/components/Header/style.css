@@ -55,6 +55,7 @@ color:#765140;
 .menu{
     display: flex;
     margin: 20px;
+    font-size: 30px;
 }
 
 .menu > li > a{

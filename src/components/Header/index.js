@@ -21,7 +21,7 @@ const Header = (props) => {
           }
             
         </div>
-          <div style={{margin: '20px 0', color: '#fff', fontWeight: 'bold'}}>
+          <div style={{margin: '20px 0', color: '#fff', fontSize:'30px',fontFamily: 'Newsreader'}}>
             {auth.authenticated ? `Hi ${auth.firstName} ${auth.lastName}`:''}</div>
         <ul className="menu">
           {

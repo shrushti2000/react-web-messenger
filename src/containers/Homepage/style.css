@@ -28,9 +28,10 @@ font-family: 'Newsreader', serif;**/
     background: #e2e0e0;
     text-align: center;
     line-height: 40px;
-    color: #000;
-    font-weight: bold;
-    font-family: sans-serif;
+     color:#765140;
+    font-size: 20px;
+    font-family: 'Newsreader', serif;
+
 }
 .chatControls{
     display: flex;
@@ -52,6 +53,9 @@ font-family: 'Newsreader', serif;**/
     padding: 5px 10px;
     box-sizing: border-box;
     cursor: pointer;
+    font-family: 'EB Garamond', serif;
+    color:#765140;
+    font-size: larger;
 }
 
 .displayName.active{
@@ -63,6 +67,9 @@ font-family: 'Newsreader', serif;**/
     height: 50px;
     overflow: hidden;
     border-radius: 25px;
+    font-family: 'EB Garamond', serif;
+    color:#765140;
+  
 }
 
 .displayName .displayPic img{
@@ -72,12 +79,13 @@ font-family: 'Newsreader', serif;**/
 }
 
 .messageStyle{
-    background: skyblue;
+    background-color: #D1BAAC;
     display: inline-block;
     padding: 5px 10px;
     border-radius: 10px;
     margin: 5px;
     display: inline-block;
+    font-family: 'EB Garamond', serif;
 }
 
 .messageSections{
@@ -86,6 +94,7 @@ font-family: 'Newsreader', serif;**/
     overflow-x: hidden;
     position: relative;
     top: 40px;
+    font-family: 'EB Garamond', serif;
 }
 .onlineStatus{
     display: inline-block;
@@ -94,9 +103,11 @@ font-family: 'Newsreader', serif;**/
     background: #16e316;
     border-radius: 5px;
     box-shadow: 0 0 10px #16e316 ;
+    font-family: 'EB Garamond', serif;
 }
 
 .onlineStatus.off{
     background: green;
     box-shadow: 0 0 0 0;
+    font-family: 'EB Garamond', serif;
 }
